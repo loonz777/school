@@ -11,14 +11,14 @@ position = (0, 0)
 
 while True:
     location = locations[position]
-    print('You are at the %s') % location
+    print('You are at the %s' % location)
 
     valid_directions = {}
-    for k, v in directions.iteritems():
-        possible_position = (position[0]+ v[0], position[1]+ v[1])
-        possible_location = locations.get(possible_location)
+    for k, v in directions.items():
+        possible_position = (position[0] + v[0], position[1] + v[1])
+        possible_location = locations.get(possible_position)
         if possible_location:
-            print("to the %s is a %s") % (k, possible_location)
+            print("to the %s is a %s" % (k, possible_location))
             valid_directions[k] = possible_position
 
     direction = input('which direction do you want to go?\n')
